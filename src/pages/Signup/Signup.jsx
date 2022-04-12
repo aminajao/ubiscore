@@ -24,7 +24,7 @@ export const Signup = () => {
       checks: 'required',
       validate: (value) => {
         if (value.includes('gmail.com')) {
-          return 'Please enter your business email address. This form does not accepet addresses from gmail.com';
+          return 'Please enter your business email address. This form does not accept addresses from gmail.com';
         }
       },
     },

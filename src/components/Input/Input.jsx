@@ -1,4 +1,4 @@
-import { InputElement, InputWrapper, Label, LabelHint, Error } from './Styled';
+import * as Styled from './Styled';
 import { Select } from './Select';
 
 export const Input = ({
@@ -17,8 +17,8 @@ export const Input = ({
   error = error ? error.toString() : '';
 
   return (
-    <InputWrapper className={className}>
-      <InputElement
+    <Styled.InputWrapper className={className}>
+      <Styled.InputElement
         error={error}
         active={value !== ''}
         type={type}
@@ -30,12 +30,12 @@ export const Input = ({
         {...props}
       />
       {placeholder && (
-        <Label active={value !== ''}>
-          {placeholder} <LabelHint>{labelHint}</LabelHint>
-        </Label>
+        <Styled.Label active={value !== ''}>
+          {placeholder} <Styled.LabelHint>{labelHint}</Styled.LabelHint>
+        </Styled.Label>
       )}
-      {error && <Error>{error}</Error>}
-    </InputWrapper>
+      {error && <Styled.Error>{error}</Styled.Error>}
+    </Styled.InputWrapper>
   );
 };
 

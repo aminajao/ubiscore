@@ -15,6 +15,7 @@ const DashboardContainer = (props) => {
         </Styled.CircleIcon>
         <h1>Jerrome Bell</h1>
         <p className="skill">Product Desginer</p>
+
         <p>
           “Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
           sint. Velit officia consequat duis enim velit mollit.{' '}

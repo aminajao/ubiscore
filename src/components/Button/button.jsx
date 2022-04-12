@@ -1,20 +1,10 @@
 import React from 'react';
-import { ReactComponent as Loader } from '../../assets/loading.svg';
 import styled from 'styled-components';
 
-export const Button = ({
-  children,
-  type = 'button',
-  isLoading,
-  isDisabled,
-  className,
-  padding,
-  ...props
-}) => {
+export const Button = ({ children, type = 'button', padding, ...props }) => {
   return (
     <StyledButton padding={padding} type={type} {...props}>
       <>{children}</>
-      {isLoading && <Loader className="h-5 w-5 ml-3 animate-pulse" />}
     </StyledButton>
   );
 };

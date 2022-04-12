@@ -1,14 +1,22 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   height: 100vh;
   color: #ffffff;
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+  }
 `;
 export const LeftContent = styled.div`
   background: #141933;
   position: relative;
-  width: 712px;
+  flex: 1;
+
   padding: 100px 120px 0 120px;
 
   h1 {
@@ -33,13 +41,23 @@ export const LeftContent = styled.div`
     color: #ffffff;
     opacity: 0.6;
   }
+
+  @media only screen and (max-width: 1024px) {
+    padding: 100px 50px 0 50px;
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 50px;
+  }
 `;
 export const RightContent = styled.div`
-  flex: 55%;
+  flex: 1;
   background: #e5e5e5;
-  width: min-content;
   overflow: scroll;
   padding-bottom: 40px;
+
+  @media only screen and (max-width: 768px) {
+    overflow: none;
+  }
 `;
 
 export const TriangleIcon = styled.div`

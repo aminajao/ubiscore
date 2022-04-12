@@ -6,12 +6,10 @@ function App() {
   return (
     <BrowserRouter>
       <GlobalStyle />
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Signup />} />
-          <Route path="/success" element={<Success />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Signup />} />
+        <Route path="/success" element={<Success />} />
+      </Routes>
     </BrowserRouter>
   );
 }
